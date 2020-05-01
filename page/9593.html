@@ -216,7 +216,10 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/21.jpg')">
+<!-- layout\_partial\post-cover.ejs文件修改
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/21.jpg')"> 
+-->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/banner/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -227,6 +230,7 @@
         </div>
     </div>
 </div>
+
 
 
 
@@ -354,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/CTF/" class="post-category">
-                                CTF
+                            <a href="/categories/MISC/" class="post-category">
+                                MISC
                             </a>
                         
                     </div>
@@ -376,7 +380,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    825
+                    820
                 </div>
                 
 
@@ -406,8 +410,6 @@
 <p>那么为什么可以说下方的脚本可以区分大小写输出键入内容呢？</p>
 <p>原理：当Leftover Capture Data：0<strong>2</strong>002c0000000000  第一组数据第二位为2时，即为大写内容</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true">#python3</span>
-<span class="token keyword">import</span> os
-
 normalKeys <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">"04"</span><span class="token punctuation">:</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"05"</span><span class="token punctuation">:</span><span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"06"</span><span class="token punctuation">:</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token string">"07"</span><span class="token punctuation">:</span><span class="token string">"d"</span><span class="token punctuation">,</span> <span class="token string">"08"</span><span class="token punctuation">:</span><span class="token string">"e"</span><span class="token punctuation">,</span>
     <span class="token string">"09"</span><span class="token punctuation">:</span><span class="token string">"f"</span><span class="token punctuation">,</span> <span class="token string">"0a"</span><span class="token punctuation">:</span><span class="token string">"g"</span><span class="token punctuation">,</span> <span class="token string">"0b"</span><span class="token punctuation">:</span><span class="token string">"h"</span><span class="token punctuation">,</span> <span class="token string">"0c"</span><span class="token punctuation">:</span><span class="token string">"i"</span><span class="token punctuation">,</span> <span class="token string">"0d"</span><span class="token punctuation">:</span><span class="token string">"j"</span><span class="token punctuation">,</span>
@@ -436,7 +438,7 @@ shiftKeys <span class="token operator">=</span> <span class="token punctuation">
           <span class="token string">"3b"</span><span class="token punctuation">:</span><span class="token string">"&lt;F2>"</span><span class="token punctuation">,</span> <span class="token string">"3c"</span><span class="token punctuation">:</span><span class="token string">"&lt;F3>"</span><span class="token punctuation">,</span><span class="token string">"3d"</span><span class="token punctuation">:</span><span class="token string">"&lt;F4>"</span><span class="token punctuation">,</span><span class="token string">"3e"</span><span class="token punctuation">:</span><span class="token string">"&lt;F5>"</span><span class="token punctuation">,</span><span class="token string">"3f"</span><span class="token punctuation">:</span><span class="token string">"&lt;F6>"</span><span class="token punctuation">,</span><span class="token string">"40"</span><span class="token punctuation">:</span><span class="token string">"&lt;F7>"</span><span class="token punctuation">,</span>
           <span class="token string">"41"</span><span class="token punctuation">:</span><span class="token string">"&lt;F8>"</span><span class="token punctuation">,</span><span class="token string">"42"</span><span class="token punctuation">:</span><span class="token string">"&lt;F9>"</span><span class="token punctuation">,</span><span class="token string">"43"</span><span class="token punctuation">:</span><span class="token string">"&lt;F10>"</span><span class="token punctuation">,</span><span class="token string">"44"</span><span class="token punctuation">:</span><span class="token string">"&lt;F11>"</span><span class="token punctuation">,</span><span class="token string">"45"</span><span class="token punctuation">:</span><span class="token string">"&lt;F12>"</span><span class="token punctuation">}</span>
 output <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-keys <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">'out.txt'</span><span class="token punctuation">)</span>
+keys <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">'xxx.txt'</span><span class="token punctuation">)</span>
 <span class="token keyword">for</span> line <span class="token keyword">in</span> keys<span class="token punctuation">:</span>
     <span class="token keyword">try</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> line<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> <span class="token punctuation">(</span>line<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">and</span> line<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'2'</span><span class="token punctuation">)</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'0'</span> <span class="token operator">or</span> line<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">:</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">"00"</span><span class="token punctuation">:</span>
@@ -472,66 +474,16 @@ flag<span class="token operator">=</span><span class="token number">0</span>
     <span class="token keyword">except</span><span class="token punctuation">:</span>
         <span class="token keyword">pass</span>
 
-<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'output :'</span> <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'output :'</span> <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上方是键盘流量的解题脚本，下方说一下ctf中解题步奏</p>
 <p>1、打开流量包，分析出键盘和鼠标流量类型</p>
-<p>2、使用tshark数据进行提起tshark -r xxx.pcapng -T fields -e usb.capdata | sed ‘/^\s*$/d’ &gt;xxx.txt</p>
+<p>2、使用tshark数据进行提起tshark -r xxx.pcapng -T fields -e usb.capdata &gt;xxx.txt</p>
 <p>3、提取后运行上方脚本即可得到键盘输入的内容</p>
 
             </div>
             <hr/>
 
             
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://blog.falsectf.top" rel="external nofollow noreferrer">False</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://blog.falsectf.top/page/9593.html">http://blog.falsectf.top/page/9593.html</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="http://blog.falsectf.top" target="_blank">False</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
 
 
 
@@ -593,7 +545,7 @@ flag<span class="token operator">=</span><span class="token number">0</span>
                 <a href="/page/7f9e.html">
                     <div class="card-image">
                         
-                        <img src="medias/featureimages/Burpsuite.png" class="responsive-img" alt="Burpsuite插件">
+                        <img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/Burpsuite.png" class="responsive-img" alt="Burpsuite插件">
                         
                         <span class="card-title">Burpsuite插件</span>
                     </div>
@@ -643,31 +595,21 @@ flag<span class="token operator">=</span><span class="token number">0</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/page/4836.html">
+                <a href="/page/eb9d.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/9.jpg" class="responsive-img" alt="MISC-内存取证">
+                        <img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/17.jpg" class="responsive-img" alt="MISC-刷题记录">
                         
-                        <span class="card-title">MISC-内存取证</span>
+                        <span class="card-title">MISC-刷题记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用工具：Dumpit.exe一款内存内置提取工具。
-TrueCrypt.exe一款磁盘加密工具。
-Notepad.exe Windows自带的记事本。
-Mspaint，exe Windows自带画图工具。
-基础命令
-
-
-命令
-功能
-
-
-
-
+                            1、nmapll.pcapng流量分析附件下载链接：https://pan.baidu.com/s/1vPnPVPKkQltwbnUp5MzNig  提取码：hgar
+题目描述
+在参加网络安全大赛第二届世界巡回赛新加坡站一场与SP战队的比赛
                         
                     </div>
                     <div class="publish-info">
@@ -682,6 +624,10 @@ Mspaint，exe Windows自带画图工具。
                                     CTF
                                 </a>
                             
+                            <a href="/categories/CTF/MISC/" class="post-category">
+                                    MISC
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -693,8 +639,8 @@ Mspaint，exe Windows自带画图工具。
                         <span class="chip bg-color">CTF</span>
                     </a>
                     
-                    <a href="/tags/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/">
-                        <span class="chip bg-color">内存取证</span>
+                    <a href="/tags/MISC/">
+                        <span class="chip bg-color">MISC</span>
                     </a>
                     
                 </div>
@@ -846,7 +792,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.6k</span>&nbsp;字
+                class="white-color">4.1k</span>&nbsp;字
             
             
             

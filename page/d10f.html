@@ -216,7 +216,10 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('medias/featureimages/DASCTF-4.png')">
+<!-- layout\_partial\post-cover.ejs文件修改
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/DASCTF-4.png')"> 
+-->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/banner/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -227,6 +230,7 @@
         </div>
     </div>
 </div>
+
 
 
 
@@ -342,6 +346,10 @@
                                 <span class="chip bg-color">CTF</span>
                             </a>
                         
+                            <a href="/tags/%E5%AE%89%E6%81%92%E6%9D%AF/">
+                                <span class="chip bg-color">安恒杯</span>
+                            </a>
+                        
                             <a href="/tags/MISC/">
                                 <span class="chip bg-color">MISC</span>
                             </a>
@@ -376,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    764
+                    732
                 </div>
                 
 
@@ -420,62 +428,11 @@ LzrcBi88Eu7oZaPANwIDAQAB
 <p><img src="/images/%E5%AE%89%E6%81%92%E6%9D%AF4%E6%9C%88/14.png" alt=""><br>AES在线解密链接：<a href="http://tool.chacuo.net/cryptaes" target="_blank" rel="noopener">http://tool.chacuo.net/cryptaes</a><br>在线对数据进行解密，即可拿到flag<br>返回结果是base64，在进行一次base64解密<br><img src="/images/%E5%AE%89%E6%81%92%E6%9D%AF4%E6%9C%88/15.png" alt=""><br>对数据进行两次base64解密即可拿到flag<br><img src="/images/%E5%AE%89%E6%81%92%E6%9D%AF4%E6%9C%88/16.png" alt=""></p>
 <h4 id="MISC4-（签到题）6G还远吗？"><a href="#MISC4-（签到题）6G还远吗？" class="headerlink" title="MISC4-（签到题）6G还远吗？"></a>MISC4-（签到题）6G还远吗？</h4><p>难度：入门<br>题目描述：5G都来了，6G还远吗？6G下还需要开会员才能高速下载吗？<br>解题思路：<br>就如同题目的描述一样，你需要冲会员才能下载<br>这道题目根本就没打算要你下载下来近一个G的文件，flag藏在了文件头部<br>点击下载后直接记事本查看头部就可以看到flag了<br><img src="/images/%E5%AE%89%E6%81%92%E6%9D%AF4%E6%9C%88/17.png" alt=""></p>
 <h4 id="MISC5-4月月赛题目质量问卷调查"><a href="#MISC5-4月月赛题目质量问卷调查" class="headerlink" title="MISC5-4月月赛题目质量问卷调查"></a>MISC5-4月月赛题目质量问卷调查</h4><p>难度：入门<br>题目描述：送分题XD<br>给了一个链接，是一个调查问卷，进去直接填好后提交就给flag</p>
-<h4 id="成绩"><a href="#成绩" class="headerlink" title="成绩"></a>成绩</h4><p>第一次打到排名这么靠前，应该是其他类的题目比较难<br>记录一次misc通关✌！！！<br><img src="/images/%E5%AE%89%E6%81%92%E6%9D%AF4%E6%9C%88/18.png" alt=""></p>
 
             </div>
             <hr/>
 
             
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://blog.falsectf.top" rel="external nofollow noreferrer">False</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://blog.falsectf.top/page/d10f.html">http://blog.falsectf.top/page/d10f.html</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="http://blog.falsectf.top" target="_blank">False</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
 
 
 
@@ -486,6 +443,10 @@ LzrcBi88Eu7oZaPANwIDAQAB
                             
                                 <a href="/tags/CTF/">
                                     <span class="chip bg-color">CTF</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AE%89%E6%81%92%E6%9D%AF/">
+                                    <span class="chip bg-color">安恒杯</span>
                                 </a>
                             
                                 <a href="/tags/MISC/">
@@ -538,7 +499,7 @@ LzrcBi88Eu7oZaPANwIDAQAB
                 <a href="/page/d10f.html">
                     <div class="card-image">
                         
-                        <img src="medias/featureimages/DASCTF-4.png" class="responsive-img" alt="安恒杯2020-4月月赛-misc">
+                        <img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/DASCTF-4.png" class="responsive-img" alt="安恒杯2020-4月月赛-misc">
                         
                         <span class="card-title">安恒杯2020-4月月赛-misc</span>
                     </div>
@@ -573,6 +534,10 @@ LzrcBi88Eu7oZaPANwIDAQAB
                         <span class="chip bg-color">CTF</span>
                     </a>
                     
+                    <a href="/tags/%E5%AE%89%E6%81%92%E6%9D%AF/">
+                        <span class="chip bg-color">安恒杯</span>
+                    </a>
+                    
                     <a href="/tags/MISC/">
                         <span class="chip bg-color">MISC</span>
                     </a>
@@ -591,7 +556,7 @@ LzrcBi88Eu7oZaPANwIDAQAB
                 <a href="/page/7f9e.html">
                     <div class="card-image">
                         
-                        <img src="medias/featureimages/Burpsuite.png" class="responsive-img" alt="Burpsuite插件">
+                        <img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/medias/featureimages/Burpsuite.png" class="responsive-img" alt="Burpsuite插件">
                         
                         <span class="card-title">Burpsuite插件</span>
                     </div>
@@ -779,7 +744,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.6k</span>&nbsp;字
+                class="white-color">4.1k</span>&nbsp;字
             
             
             
