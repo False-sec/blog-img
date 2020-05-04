@@ -384,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    300
+                    712
                 </div>
                 
 
@@ -407,8 +407,11 @@
 <pre><code>在参加网络安全大赛第二届世界巡回赛新加坡站一场与SP战队的比赛时，
 作为K&amp;K战队主防手的你使用经典的“三条命令”检查端口封闭状况。
 可是这次比赛平台没有回显，你能查出来有哪些端口是开放的嘛？
-请将开放端口按由小到大顺序写入flag中 如：开放1、22、234端口，flag{122234}</code></pre><p>根据题目的描述，这是出自《亲爱的，热爱的》电视剧中的一段故事，其中有效信息如下图<br><img src="/images/nmapl.jpg" alt=""><br>根据上图我们可以看到这是对自己进行了扫描，使用了 -sT -A参数<br><img src="/images/nmap2.jpg" alt=""><br>参考链接：<a href="https://www.cocosec.com/archives/114.html" target="_blank" rel="noopener">https://www.cocosec.com/archives/114.html</a><br>由上图可以得知在进行TCP完全链接扫描时，会进行三次握手，而握手成功的标识就是返回SYN与ACK包<br>由此我们可以在wireshark中构造过滤条件，选出符合条件的数据包<br>过滤语句：<code>tcp.flags.ack == 1 and tcp.flags.syn == 1</code></p>
-<p><img src="/images/nmapll.png" alt=""><br>经过观察可以得到flag{21226318013306}</p>
+请将开放端口按由小到大顺序写入flag中 如：开放1、22、234端口，flag{122234}</code></pre><p>根据题目的描述，这是出自《亲爱的，热爱的》电视剧中的一段故事，其中有效信息如下图<br><img src="/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/nmapl.jpg" alt=""><br>根据上图我们可以看到这是对自己进行了扫描，使用了 -sT -A参数<br><img src="/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/nmap2.jpg" alt=""><br>参考链接：<a href="https://www.cocosec.com/archives/114.html" target="_blank" rel="noopener">https://www.cocosec.com/archives/114.html</a><br>由上图可以得知在进行TCP完全链接扫描时，会进行三次握手，而握手成功的标识就是返回SYN与ACK包<br>由此我们可以在wireshark中构造过滤条件，选出符合条件的数据包<br>过滤语句：<code>tcp.flags.ack == 1 and tcp.flags.syn == 1</code></p>
+<p><img src="/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/nmapll.png" alt=""><br>经过观察可以得到flag{21226318013306}</p>
+<h4 id="2、De1CTF-Misc杂烩-Misc-Chowder"><a href="#2、De1CTF-Misc杂烩-Misc-Chowder" class="headerlink" title="2、De1CTF-Misc杂烩/Misc Chowder"></a>2、De1CTF-Misc杂烩/Misc Chowder</h4><p>以下链接失效可以qq联系我重新挂上，如有题目附件侵权联系我删除<br>原始附件链接：<a href="https://drive.google.com/file/d/1-SrQ8JbD8zAQNVlvuwu3T2Lbu_o1knRQ/view?usp=sharing" target="_blank" rel="noopener">https://drive.google.com/file/d/1-SrQ8JbD8zAQNVlvuwu3T2Lbu_o1knRQ/view?usp=sharing</a><br>网盘附件链接：链接：<a href="https://pan.baidu.com/s/1tyxvn-CSq6QJqZGyJWnqVA" target="_blank" rel="noopener">https://pan.baidu.com/s/1tyxvn-CSq6QJqZGyJWnqVA</a> 提取码：tt73 <code>侵删</code></p>
+<p><code>hint1：流量包中的网络连接对解题没有帮助</code><br><code>不需要访问流量里任何一个的服务器地址，所有数据都可以从流量包里直接提取</code><br><code>压缩包密码暴破考点中，密码的长度为6位，前两位为DE。</code></p>
+<p>首先，下载题目附件后发现是一个pcap文件，wireshark打开分析<br>有很多的无用流量，过滤http协议,upload字符，后发现一个upload操作，这里主要是png图片有用<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-1.png" alt=""><br>选中这条流量，将png图片导出<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-2.png" alt=""><br>之后打开这个png图片，发现是一个链接<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-3.png" alt=""><br>原链接应该失效了，这里我放到网盘了：链接：<a href="https://pan.baidu.com/s/1vFSL61DHItX9gmBR8xUH8g" target="_blank" rel="noopener">https://pan.baidu.com/s/1vFSL61DHItX9gmBR8xUH8g</a> 提取码：rk0o <code>侵删</code><br>下载下来后是一个readme.docx文件<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-4" alt=""><br>这里我打开docx会报错，所以我直接改后缀为zip了，然后解压，发现了另一个zip文件<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-5" alt=""><br>但是这个zip有密码，根据题目的提示，需要爆破，这里掩码爆破<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-6" alt=""><br>最后爆破了20多分钟得到密码：DE34Q1<br>将You_found_me_Orz.zip解压后是一个jpg的图片，binwalk分离出一个Rar文件<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-7" alt=""><br>Rar解压后发现3个文件，flag.txt是假flag，666.png也没有有效信息无lsb隐写<br>最后想到了NTFS隐写，dir /r发现果然是NTFS，notepad读一下，获得flag<br><img src="https://cdn.jsdelivr.net/gh/False-sec/blog-img@master/images/MISC-%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/misc2-8" alt=""><br>emmmm  大杂烩  大套娃！！！</p>
 
             </div>
             <hr/>
@@ -719,7 +722,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.1k</span>&nbsp;字
+                class="white-color">4.5k</span>&nbsp;字
             
             
             
